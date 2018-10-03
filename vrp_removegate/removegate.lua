@@ -17,7 +17,7 @@ Citizen.CreateThread(function()
 		for a = 1, #barriers do
 			local player = PlayerId()
 			local Ped = GetPlayerPed(player)
-			local pedPos = GetEntityCoords(pedPed, false)
+			local pedPos = GetEntityCoords(Ped, false)
 			local barrier = GetClosestObjectOfType(pedPos.x, pedPos.y, pedPos.z, 500.0, GetHashKey(barriers[a]), 0, 0, 0)
 			if barrier ~= 0 then
 				SetEntityAsMissionEntity(barrier, 1, 1)
